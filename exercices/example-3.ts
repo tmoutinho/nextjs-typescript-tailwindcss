@@ -9,3 +9,5 @@ interface IconProps {
 export const Icon = (props: IconProps) => {
   return null;
 };
+
+export {};

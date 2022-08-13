@@ -26,3 +26,5 @@ type Cases = [
 export const Hello = () => {
   return null;
 };
+
+export {};

@@ -39,3 +39,5 @@ const getLowerKeyValue = <
 
 getLowerKeyValue(obj, "baz"); // "general"
 getLowerKeyValue(obj, "foo", "bar1"); // "elements"
+
+export {};
