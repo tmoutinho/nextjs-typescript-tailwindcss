@@ -4,10 +4,11 @@ import { Fragment, PropsWithChildren } from "react";
 interface ModalProps {
   isOpen: boolean;
   closeModal: () => void;
+  title: string;
 }
 
 const Modal = (props: PropsWithChildren<ModalProps>) => {
-  const { isOpen, closeModal, children } = props;
+  const { isOpen, closeModal, title, children } = props;
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -21,7 +22,7 @@ const Modal = (props: PropsWithChildren<ModalProps>) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black bg-opacity-25" />
+          <div className="fixed inset-0 bg-black bg-opacity-30" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -40,7 +41,7 @@ const Modal = (props: PropsWithChildren<ModalProps>) => {
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
                 >
-                  Payment successful
+                  {title}
                 </Dialog.Title>
 
                 {children}
