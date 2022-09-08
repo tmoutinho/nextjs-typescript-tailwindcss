@@ -20,11 +20,12 @@ const getUniqueKeys = <TObj, Keys extends keyof TObj>(
 
 getUniqueKeys(obj, "foo");
 getUniqueKeys(obj);
+//  ^?
 
 // Get lower key value with 2 layers
 const getLowerKeyValue = <
   T,
-  firstKey extends keyof T, // foo, baz, qux, bar
+  firstKey extends keyof T,
   secondKey extends keyof T[firstKey] // bar1, bar2, bar3
 >(
   obj: T,

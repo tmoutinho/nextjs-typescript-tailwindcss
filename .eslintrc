@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "jest/expect-expect": "off",
+    "prettier/prettier": "error",
+    "import/no-anonymous-default-export": "off"
+  },
+  "plugins": ["prettier"],
+  "extends": ["react-app", "prettier"]
+}
