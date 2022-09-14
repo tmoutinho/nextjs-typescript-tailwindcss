@@ -1,9 +1,10 @@
-import { Button, Flex, Grid, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import { FaBeer } from 'react-icons/fa';
 
 import ConductiveButton from '../components/button';
-import Card from '../components/card';
-import ConductiveInput from '../components/input';
+import BarChart from '../components/chart/bar-chart';
+import LineChart from '../components/chart/line-chart';
+import PieChart from '../components/chart/pie-chart';
 import ChakraModal from '../components/modal-chakra';
 
 // we can choose only one lib from react-icons to not overcomplicate
@@ -38,13 +39,85 @@ const Home = () => {
           <ChakraModal />
         </Flex>
 
-        <Grid gap="8px">
-          <Text>Inputs</Text>
-
-          <ConductiveInput variant="filled" />
-          <ConductiveInput variant="outline" />
-
-          <Card />
+        <Grid templateColumns="1fr 1fr 1fr">
+          <div style={{ height: '300px' }}>
+            <LineChart
+              data={[
+                {
+                  id: 'germany',
+                  data: [
+                    {
+                      x: 'Page A',
+                      y: 167,
+                    },
+                    {
+                      x: 'Page B',
+                      y: 166,
+                    },
+                    {
+                      x: 'Page C',
+                      y: 33,
+                    },
+                    {
+                      x: 'Page D',
+                      y: 141,
+                    },
+                    {
+                      x: 'Page E',
+                      y: 93,
+                    },
+                    {
+                      x: 'Page F',
+                      y: 220,
+                    },
+                    {
+                      x: 'Page G',
+                      y: 11,
+                    },
+                  ],
+                },
+                {
+                  id: 'norway',
+                  data: [
+                    {
+                      x: 'Page A',
+                      y: 250,
+                    },
+                    {
+                      x: 'Page B',
+                      y: 183,
+                    },
+                    {
+                      x: 'Page C',
+                      y: 128,
+                    },
+                    {
+                      x: 'Page D',
+                      y: 3,
+                    },
+                    {
+                      x: 'Page E',
+                      y: 114,
+                    },
+                    {
+                      x: 'Page F',
+                      y: 211,
+                    },
+                    {
+                      x: 'Page G',
+                      y: 278,
+                    },
+                  ],
+                },
+              ]}
+            />
+          </div>
+          <div style={{ height: '300px' }}>
+            <PieChart />
+          </div>
+          <div style={{ height: '300px' }}>
+            <BarChart />
+          </div>
         </Grid>
       </Grid>
     </div>

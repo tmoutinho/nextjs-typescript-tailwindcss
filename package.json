@@ -8,20 +8,24 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.8",
+    "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@nivo/bar": "^0.80.0",
+    "@nivo/core": "^0.80.0",
+    "@nivo/line": "^0.80.0",
+    "@nivo/pie": "^0.80.0",
     "framer-motion": "^6",
     "jotai": "^1.8.3",
     "next": "latest",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.2",
+    "react-dom": "^18.0.2",
     "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
     "@types/node": "^12.12.21",
-    "@types/react": "^17.0.2",
+    "@types/react": "^18.0.2",
     "@types/react-dom": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
